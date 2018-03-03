@@ -12,8 +12,8 @@ class App extends Component {
         <h1>
           {this.props.count}
         </h1>
-        <button onClick={() => this.props.dispatch({type: 'INCREMENT'})}>+</button>
-        <button onClick={() => this.props.dispatch({type: 'DECREMENT'})}>-</button>
+        <button onClick={this.props.increment}>+</button>
+        <button onClick={this.props.decrement}>-</button>
       </div>
     );
   }
@@ -25,4 +25,11 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, null)(App);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    increment: () => dispatch({type: 'INCREMENT'}),
+    decrement: () => dispatch({type: 'DECREMENT'}),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
