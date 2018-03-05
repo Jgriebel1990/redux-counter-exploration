@@ -1,8 +1,8 @@
 import * as types from './types';
-export const increment = () => ({
+export const incrementAction = () => ({
     type: types.INCREMENT
 });
 
-export const decrement = () => ({
-    types: types.DECREMENT
+export const decrementAction = () => ({
+    type: types.DECREMENT
 });
