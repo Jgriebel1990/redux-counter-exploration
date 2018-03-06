@@ -4,6 +4,7 @@
 .input{
     background-color: crimson;
     color: rebeccapurple;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 45px;
     height: 50px;
     width: 100px;
@@ -11,9 +12,14 @@
 }
 .text-clr{
     color: chocolate;
+    font-size: 45px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.btn-clr-1{
+.btn-1{
     background-color: darkorchid;
+    font-size: 45px;
+    height: 50px;
+    width: 250px;
 }
 .btn-clr-2{
     background-color: darkolivegreen;
