@@ -6,8 +6,10 @@ const Counter = props => {
         <h1>
             {props.count}
         </h1>
-        <button onClick={props.increment}>+</button>
-        <button onClick={props.decrement}>-</button>
+        <button onClick={() => props.decrementBy(props.input)}>decrease by</button>
+        <button onClick={() => props.incrementBy(props.input)}>increase by</button>
+        <button onClick={() => props.decrementBy(1)}>-</button>
+        <button onClick={() => props.incrementBy(1)}>+</button>
         <button onClick={() => props.incrementBy(2)}>+2</button>
         <button onClick={() => props.decrementBy(2)}>-2</button>
       </div>

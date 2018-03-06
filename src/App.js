@@ -2,22 +2,36 @@ import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
 import Counter from './Counter';
-import { 
-    incrementAction, 
-    decrementAction, 
+import {  
     incrementByAction, 
-    decrementByAction } from './counter/actions'
+    decrementByAction, } from './counter/actions'
 
 class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      input: 1
+    }
+    this.handleInputChange = this.handleInputChange.bind(this)
+  }
+handleInputChange(e){
+  this.setState({input: +e.target.value});
+}
   render() {
     return (
       <div>
-        <Counter {...this.props}/>
-        <Counter {...this.props}/>
-        <Counter {...this.props}/>
-        <Counter {...this.props}/>
-        <Counter {...this.props}/>
-        <Counter {...this.props}/>
+        <form>
+            <input 
+              type="number"
+              onChange={this.handleInputChange}
+              value={this.state.input}/>
+        </form>
+        <Counter {...this.props} {...this.state}/>
+        <Counter {...this.props} {...this.state}/>
+        <Counter {...this.props} {...this.state}/>
+        <Counter {...this.props} {...this.state}/>
+        <Counter {...this.props} {...this.state}/>
+        <Counter {...this.props} {...this.state}/>
       </div>
     );
   }
@@ -31,8 +45,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    increment: () => dispatch(incrementAction()),
-    decrement: () => dispatch(decrementAction()),
     incrementBy: (num) => dispatch(incrementByAction(num)),
     decrementBy: (num) => dispatch(decrementByAction(num))
   }
