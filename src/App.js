@@ -19,9 +19,10 @@ handleInputChange(e){
 }
   render() {
     return (
-      <div>
+      <div className='bg-clr'>
         <form>
             <input 
+              className='input'
               type="number"
               onChange={this.handleInputChange}
               value={this.state.input}/>

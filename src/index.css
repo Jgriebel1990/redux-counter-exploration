@@ -1,0 +1,26 @@
+.bg-clr{
+    background-color: rgba(6, 250, 169, 0.829);
+}
+.input{
+    background-color: crimson;
+    color: rebeccapurple;
+    font-size: 45px;
+    height: 50px;
+    width: 100px;
+
+}
+.text-clr{
+    color: chocolate;
+}
+.btn-clr-1{
+    background-color: darkorchid;
+}
+.btn-clr-2{
+    background-color: darkolivegreen;
+}
+.btn-clr-3{
+    background-color: moccasin;
+}
+.btn-clr-4{
+    background-color: seagreen;
+}
